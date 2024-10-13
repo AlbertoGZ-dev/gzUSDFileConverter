@@ -1,3 +1,3 @@
 @echo off
-python gzUSDFileConverter.py %*
+python src/gzUSDFileConverter.py %*
 rem pause
