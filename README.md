@@ -1,5 +1,5 @@
 # gzUSDFileConverter
-**gzUSDFileConverter** is a tool to convert format for.usd files from binary to ascii or ascii to binary encoding.
+**gzUSDFileConverter** is a tool to convert USD files format from binary to ascii or ascii to binary encoding.
 
 <img src="https://github.com/AlbertoGZ-dev/gzUSDFileConverter/blob/main/docs/gzUSDFileConverter.png"></img>
 
