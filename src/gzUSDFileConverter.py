@@ -23,6 +23,13 @@ from tkinterdnd2 import DND_FILES, TkinterDnD
 from tkinter import messagebox
 from PIL import Image, ImageTk
 
+print('''
+      ██████████████████████████████████████████
+      ██                                      ██
+      ██    Welcome to gzUSDFileConverter     ██
+      ██                                      ██
+      ██████████████████████████████████████████
+      ''')
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
 hou_bin = str("C:\\Program Files\\Side Effects Software\\Houdini 19.5.773\\bin\\")
@@ -30,7 +37,7 @@ os.chdir(hou_bin)
 
 suffix = "ascii"
 usdFormat = "usda"
-print(suffix, usdFormat)
+#print(suffix, usdFormat)
 
 textLab = "Drop .usd file here..."
 
@@ -58,7 +65,7 @@ def swap():
         asciiToBinBtn.place(x=20, y=340)
         usdFormat = "usdc"
         suffix = "bin"
-        print(suffix, usdFormat)
+        print("Conversion from ASCII to Binary. Format:"+usdFormat+" | Suffix:"+suffix)
         return suffix, usdFormat
     
     elif usdFormat=='usdc':
@@ -66,7 +73,7 @@ def swap():
         asciiToBinBtn.place(x=1000, y=1000) #fake hide
         usdFormat = "usda"
         suffix = "ascii"
-        print(suffix, usdFormat)
+        print("Conversion from Binary to ASCII. Format:"+usdFormat+" | Suffix:"+suffix)
         return suffix, usdFormat
         
 
@@ -101,17 +108,17 @@ def exit():
 
 
 # Load images
-img1 = Image.open(dir_path+"/"+"imgs/dropArea2.png")
+img1 = Image.open(dir_path+"/../imgs/dropArea2.png")
 img1res = img1.resize((360, 250))
-img2 = Image.open(dir_path+"/"+"imgs/convertFile.png")
+img2 = Image.open(dir_path+"/../imgs/convertFile.png")
 img2res = img2.resize((360, 54))
-img3 = Image.open(dir_path+"/"+"imgs/binToAscii.png")
+img3 = Image.open(dir_path+"/../imgs/binToAscii.png")
 img3res = img3.resize((360, 54), resample=2)
-img4 = Image.open(dir_path+"/"+"imgs/asciiToBin.png")
+img4 = Image.open(dir_path+"/../imgs/asciiToBin.png")
 img4res = img4.resize((360, 54))
-img5 = Image.open(dir_path+"/"+"imgs/exit.png")
+img5 = Image.open(dir_path+"/../imgs/exit.png")
 img5res = img5.resize((30, 30), resample=5)
-img6 = Image.open(dir_path+"/"+"imgs/swapFormat.png")
+img6 = Image.open(dir_path+"/../imgs/swapFormat.png")
 img6res = img6.resize((40, 40), resample=3)
 
 
@@ -128,7 +135,7 @@ root.overrideredirect(1)
 root.wm_attributes("-transparentcolor", "grey")
 root.resizable(False, False)
 
-frameImg = tk.PhotoImage(file=dir_path+"/"+"imgs/uiFrame2.png")
+frameImg = tk.PhotoImage(file=dir_path+"/../imgs/uiFrame2.png")
 frameLab = tk.Label(root, bg='grey', image=frameImg)
 frameLab.pack(fill=tk.BOTH, expand=True)
 frameLab.bind("<B1-Motion>", move_app)
